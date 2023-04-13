@@ -4,7 +4,7 @@ function Navigation(props) {
     const { currentPage, handlePageChange } = props;
 
     return (
-        <nav>
+        <nav className='Navigation'>
             <ul>
                 <a href="#about" onClick={() => handlePageChange("About") } className={ currentPage === "About" ? "nav-item-active" : "nav-item"}>About</a>
             </ul>

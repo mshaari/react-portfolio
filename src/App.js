@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
@@ -34,9 +33,8 @@ function App() {
 
   return (
     <div className="bucket-app">
-      <Header />
+      <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
       {/* We are passing the currentPage from state and the function to update it */}
-      <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component depending on what page they are on */}
       {renderPage()}
       <Footer />

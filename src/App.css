@@ -3,6 +3,16 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.Header {
+    display: flex;
+    align-items: center;
+}
+
+.Navigation {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 nav ul {
     display: inline;
 }
