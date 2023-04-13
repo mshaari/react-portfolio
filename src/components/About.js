@@ -3,8 +3,9 @@ import Project from './Project';
 
 function About() {
     return (
-        <div>
-            <h1>About section here</h1>
+        <div className='About'>
+            <img src={process.env.PUBLIC_URL + '/assets/Headshot.png'} alt="Headshot of Michael Shaari" className='Headshot'/>
+            <p className='AboutMe'>Hello, my name is Michael Shaari! I am a student at Harvard College intending to pursue a Bachelor's degree in Applied Mathematics - Economics & Computer Science and a concurrent Master's degree in Computer Science from Harvard SEAS. I am a graduate of Horace Mann School in New York City. </p>
         </div>
     );
 }

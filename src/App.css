@@ -3,9 +3,35 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.About {
+    display: flex;
+    margin-bottom: 10px;
+    background-image: url('../public/assets/MovingBackground.gif');
+}
+
+.AboutMe {
+    background-color: transparent;
+    color: #E4DFDA;
+}
+
+.Headshot {
+    border-radius: 50%;
+    width: 200px;
+    margin: 7px;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .Header {
+    color: #032B43;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .Navigation {
@@ -17,6 +43,52 @@ nav ul {
     display: inline;
 }
 
+.nav-item {
+
+}
+
 .nav-item-active {
     background-color: #ffba08;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@keyframes rotatingColors {
+    0%   {background-color: #D00000;}
+    25%  {background-color: #FFBA08;}
+    50%  {background-color: #3F88C5;}
+    100% {background-color: #136F63;}
+}
+
+.flashingUrl a {
+    background-color: #D00000;
+    padding: 5px;
+    border-radius: 10px;
+    animation-name: rotatingColors;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
+}
+
+.projectList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projectListItem {
+    padding: 5px;
+    margin: 10px;
+    border:#136F63 3px solid;
+    border-radius: 10px;
+}
+
+.projectListItem img {
+    width: 400px;
+}
+
+Footer {
+    border-top: 3px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
