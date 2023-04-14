@@ -6,12 +6,12 @@
 .About {
     display: flex;
     margin-bottom: 10px;
-    background-image: url('../public/assets/MovingBackground.gif');
+    /* background-image: url('../public/assets/MovingBackground.gif'); */
 }
 
 .AboutMe {
     background-color: transparent;
-    color: #E4DFDA;
+    /* color: #E4DFDA; */
 }
 
 .Headshot {

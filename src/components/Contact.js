@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Project from './Project';
 
-function Header() {
+function Contact() {
     return (
         <div>
             <h1>Contact section here</h1>
@@ -9,4 +9,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Contact;
