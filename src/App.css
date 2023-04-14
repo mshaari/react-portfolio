@@ -109,6 +109,14 @@ nav ul {
     background-color: transparent;
 }
 
+.Resume {
+    padding: 10px;
+}
+
+.Resume h2{
+    text-align: center;
+}
+
 Footer {
     background-color: #136F63;
     display: flex;
