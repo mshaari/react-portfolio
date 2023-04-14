@@ -26,7 +26,7 @@ function Header() {
     ]
 
     return (
-        <div>
+        <div className='Portfolio'>
             <h2>My Professional Web Development Portfolio</h2>
             <p>See the below projects that demonstrate my web development capabilities and work.</p>
             <Project projects={projects} />
