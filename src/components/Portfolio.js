@@ -23,12 +23,30 @@ function Header() {
             github: "https://github.com/mshaari/prework-study-guide",
             image: "PreworkStudyGuide.png"
         },
+        {
+            name: "Tech Blog",
+            url: "https://warm-basin-90842.herokuapp.com/",
+            github: "https://github.com/mshaari/tech-blog-site",
+            image: "TechBlog.png"
+        },
+        {
+            name: "Note Taker",
+            url: "https://floating-scrubland-28964.herokuapp.com/notes",
+            github: "https://github.com/mshaari/note-taker",
+            image: "NoteTaker.png"
+        },
+        {
+            name: "Weather Dashboard",
+            url: "https://mshaari.github.io/weather-dashboard/",
+            github: "https://github.com/mshaari/weather-dashboard",
+            image: "WeatherDashboard.png"
+        }
     ]
 
     return (
         <div className='Portfolio'>
             <h2>My Professional Web Development Portfolio</h2>
-            <p>See the below projects that demonstrate my web development capabilities and work.</p>
+            <p>See the below projects that demonstrate my web development capabilities and work. Click on the image to visit the application.</p>
             <Project projects={projects} />
         </div>
     );

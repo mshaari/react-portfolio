@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Resume() {
     return (
         <div className='Resume'>
-            <h2>Michael Shaari is a Columbia Engineering trained web developer and incoming first-year at Harvard College intending to pursue Computer Science.</h2>
+            <h2>Michael Shaari is a Columbia Engineering trained web developer.</h2>
 
             <h4 className='flashingUrl'>Please download <a href="https://docs.google.com/document/d/119_vzTPnYz5_6ILKF_BhAOgVCKMiuWqE/edit?usp=sharing&ouid=110974647710832920413&rtpof=true&sd=true">my resume</a></h4>
 
