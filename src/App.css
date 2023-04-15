@@ -110,19 +110,71 @@ nav ul {
 }
 
 Form {
+    padding: 20px;
+    text-align: center;
+}
 
+Form input {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: #032B43 2px solid;
+}
+
+Form textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 60px;
+    border-radius: 5px;
+    border: #032B43 2px solid;
+}
+
+#submitButton {
+    margin-top: 30px;
+    background-color: #3F88C5;
+}
+
+#submitButton:hover {
+    background-color: #FFBA08;
 }
 
 #emailfalse {
-   background-color: rgba(255, 0, 0, 0.399);
+   background-color: rgba(255, 0, 0, 0.4);
 }
 
 #namefalse {
-   background-color: rgba(255, 0, 0, 0.399);
+   background-color: rgba(255, 0, 0, 0.4);
 }
 
 #messagefalse {
-    background-color: rgba(255, 0, 0, 0.399);
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+#emailtrue {
+    background-color: rgba(0, 128, 0, 0.4);
+}
+
+#nametrue {
+    background-color: rgba(0, 128, 0, 0.4);
+}
+
+#messagetrue {
+    background-color: rgba(0, 128, 0, 0.4);
+}
+
+#submissionAlert {
+    color: #D00000;
+    text-align: center;
+}
+
+#submittedtrue {
+    display: none;
 }
 
 .Resume {

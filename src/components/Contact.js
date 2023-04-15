@@ -16,39 +16,10 @@ function Contact() {
     const [emailAlert, setEmailAlert] = useState('');
     const [messageAlert, setMessageAlert] = useState('');
 
+    const [submissionAlert, setSubmissionAlert] = useState('');
 
-    // // Check email
-    // const checkEmail = (e) => {
-    //     var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    //     if (e.target.value.match(regex)) {
-    //         setEmailState(true);
-    //         return;
-    //     } else {
-    //         window.alert("invalid email");
-    //         return;
-    //     }
-    // };
-
-    // const checkName = (e) => {
-    //     if (e.target.value !== "") {
-    //         setNameState(true);
-    //         return;
-    //     } else {
-    //         window.alert("invalid name");
-    //         return;
-    //     }
-    // };
-
-    // const checkMessage = (e) => {
-    //     if (e.target.value !== "") {
-    //         setMessageState(true);
-    //         return;
-    //     } else {
-    //         window.alert("invalid name");
-    //         return;
-    //     }
-    // };
+    // State of whether form was submitted or not (determines whether to show or hide)
+    const [submittedStatus, setSubmittedStatus] = useState(false);
 
     const handleFormChange = (e) => {
         e.preventDefault();
@@ -70,18 +41,26 @@ function Contact() {
                 setMessageState(false);
                 setMessageAlert(<p>Please enter a valid message.</p>)
             }
-        } else { //If they did enter an email, now we need to make sure the email is actually valid
-            const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        } else {
+            if (e.target.name === "user_name") {
+                setNameState(true);
+                setNameAlert('')
+            } else if (e.target.name === "user_email") {
+                const regex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
-            if (e.target.value.match(regex)) {
-                setEmailState(true);
-                return;
-            } else {
-                setEmailState(false);
-                setNameAlert(<p>Please enter a valid email.</p>);
+                if (e.target.value.match(regex)) {
+                    setEmailState(true);
+                    setEmailAlert('')
+                    return;
+                } else {
+                    setEmailState(false);
+                    setEmailAlert(<p>Please enter a valid email.</p>);
+                }
+            } else if (e.target.name === "message") {
+                setMessageState(true);
+                setMessageAlert('')
             }
         }
-
     };
 
 
@@ -94,23 +73,33 @@ function Contact() {
             }, (error) => {
                 console.log(error.text);
             });
-
+        
         setFormData({ message: "", user_email: "", user_name: "" });
+        setMessageState(undefined);
+        setEmailState(undefined);
+        setNameState(undefined);
+
+        setSubmissionAlert(<h2 id='submissionAlert'>Thank you for contacting me! I have received your email and will respond as soon as possible.</h2>);
+        
+        setSubmittedStatus(true);
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail}>
+        <div>
+            <form ref={form} onSubmit={sendEmail} id={'submitted' + submittedStatus}>
             <label>Name</label>
-            <input value={formData.name} type="text" name="user_name" onChange={handleFormChange} onBlur={handleBlur} id={'name' + nameState} required />
+            <input value={formData.user_name} type="text" name="user_name" onChange={handleFormChange} onBlur={handleBlur} id={'name' + nameState} required />
             {nameAlert}
             <label>Email</label>
-            <input value={formData.email} type="email" name="user_email" onChange={handleFormChange} onBlur={handleBlur} id={'email' + emailState} required />
+            <input value={formData.user_email} type="email" name="user_email" onChange={handleFormChange} onBlur={handleBlur} id={'email' + emailState} required />
             {emailAlert}
             <label>Message</label>
             <textarea value={formData.message} name="message" onChange={handleFormChange} onBlur={handleBlur} id={'message' + messageState} required />
             {messageAlert}
-            <input type="submit" value="Send" />
+            <input id='submitButton' type="submit" value="Send" />
         </form>
+        {submissionAlert}
+        </div>  
     );
 }
 
