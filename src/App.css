@@ -109,6 +109,22 @@ nav ul {
     background-color: transparent;
 }
 
+Form {
+
+}
+
+#emailfalse {
+   background-color: rgba(255, 0, 0, 0.399);
+}
+
+#namefalse {
+   background-color: rgba(255, 0, 0, 0.399);
+}
+
+#messagefalse {
+    background-color: rgba(255, 0, 0, 0.399);
+}
+
 .Resume {
     padding: 10px;
 }
