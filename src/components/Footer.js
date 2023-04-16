@@ -17,7 +17,7 @@ function Footer() {
 
             <ul className='FooterElements'>
                 <li>
-                    <a href="#https://github.com/mshaari">GitHub</a>
+                    <a href="https://github.com/mshaari">GitHub</a>
                 </li>
 
                 <li>
