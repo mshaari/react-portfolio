@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Project from './Project';
+import React from 'react';
 
 function Footer() {
     return (

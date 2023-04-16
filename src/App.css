@@ -17,17 +17,48 @@
 
 .AboutMe {
     background-color: transparent;
+    margin: 10px;
 }
 
 .Headshot {
     border-radius: 50%;
     width: 200px;
+    height: 200px;
     margin: 7px;
 }
 
 a {
     text-decoration: inherit;
     color: inherit;
+}
+
+@media screen and (max-width: 770px) {
+    .Header {
+        color: #032B43;
+        background-color: #3F88C5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .Navigation {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav-item {
+        margin: 0px;
+    }
+
+    .Headshot {
+        border-radius: 20%;
+        width: 130px;
+        height: 130px;
+        margin: 10px;
+    }
 }
 
 .Header {
