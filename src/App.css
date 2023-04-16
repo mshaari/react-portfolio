@@ -17,6 +17,7 @@
 
 .AboutMe {
     background-color: transparent;
+    font-size: large;
     margin: 10px;
 }
 
@@ -72,28 +73,29 @@ a {
 }
 
 .Header h1 {
-    background-color: #3F88C5;
+    background-color: transparent;
 }
 
 .Navigation {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
-    background-color: #3F88C5;
+    background-color: transparent;
 }
 
 nav ul {
     display: inline;
-    background-color: #3F88C5;
+    background-color: transparent;
 }
 
 .nav-item {
-    background-color: #3F88C5;
+    background-color: transparent;
 }
 
 .nav-item-active {
     background-color: #ffba08;
-    padding: 5px;
     border-radius: 10px;
+    padding: 5px;
 }
 
 @keyframes rotatingColors {
@@ -147,6 +149,21 @@ nav ul {
     background-color: transparent;
 }
 
+@media screen and (max-width: 500px) {
+    .projectListItem {
+        max-width: 300px;
+    }
+
+    .projectListItem img {
+        width: 300px;
+        border-radius: 10px;
+    }
+}
+
+.ContactForm {
+    text-align: center;
+}
+
 Form {
     padding: 20px;
     text-align: center;
@@ -171,6 +188,29 @@ Form textarea {
     height: 60px;
     border-radius: 5px;
     border: #032B43 2px solid;
+}
+
+@media screen and (max-width: 700px) {
+    Form input {
+        display: block;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 25px;
+        border-radius: 5px;
+        border: #032B43 2px solid;
+    }
+    
+    Form textarea {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 60px;
+        border-radius: 5px;
+        border: #032B43 2px solid;
+    }
 }
 
 #submitButton {
@@ -211,7 +251,7 @@ Form textarea {
     text-align: center;
 }
 
-#submittedtrue {
+.submittedtrue {
     display: none;
 }
 
@@ -229,31 +269,29 @@ Form textarea {
 
 Footer {
     background-color: #136F63;
-    width: 100%;
+    height: 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #FFBA08;
-    position: fixed;
-    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .FooterElements {
     display: flex;
     justify-content: space-evenly;
     background-color: transparent;
+    color: #FFBA08;
 }
 
-.FooterElements ul {
+.FooterElements li {
     display: inline;
     background-color: transparent;
 }
 
-.FooterElements ul a {
+.FooterElements li a {
     background-color: transparent;
 }
 
-.FooterElements ul a:hover {
+.FooterElements li a:hover {
     background-color: #D00000;
     padding: 5px;
     border-radius: 10px;

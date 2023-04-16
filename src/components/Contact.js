@@ -73,33 +73,35 @@ function Contact() {
             }, (error) => {
                 console.log(error.text);
             });
-        
+
         setFormData({ message: "", user_email: "", user_name: "" });
         setMessageState(undefined);
         setEmailState(undefined);
         setNameState(undefined);
 
         setSubmissionAlert(<h2 id='submissionAlert'>Thank you for contacting me! I have received your email and will respond as soon as possible.</h2>);
-        
+
         setSubmittedStatus(true);
     };
 
     return (
-        <div>
-            <form ref={form} onSubmit={sendEmail} id={'submitted' + submittedStatus}>
-            <label>Name</label>
-            <input value={formData.user_name} type="text" name="user_name" onChange={handleFormChange} onBlur={handleBlur} id={'name' + nameState} required />
-            {nameAlert}
-            <label>Email</label>
-            <input value={formData.user_email} type="email" name="user_email" onChange={handleFormChange} onBlur={handleBlur} id={'email' + emailState} required />
-            {emailAlert}
-            <label>Message</label>
-            <textarea value={formData.message} name="message" onChange={handleFormChange} onBlur={handleBlur} id={'message' + messageState} required />
-            {messageAlert}
-            <input id='submitButton' type="submit" value="Send" />
-        </form>
-        {submissionAlert}
-        </div>  
+        <div className='ContactForm'>
+            <h3 className={'submitted' + submittedStatus}>Please fill out the below form to contact me.</h3>
+
+            <form ref={form} onSubmit={sendEmail} className={'submitted' + submittedStatus}>
+                <label>Name</label>
+                <input value={formData.user_name} type="text" name="user_name" onChange={handleFormChange} onBlur={handleBlur} id={'name' + nameState} required />
+                {nameAlert}
+                <label>Email</label>
+                <input value={formData.user_email} type="email" name="user_email" onChange={handleFormChange} onBlur={handleBlur} id={'email' + emailState} required />
+                {emailAlert}
+                <label>Message</label>
+                <textarea value={formData.message} name="message" onChange={handleFormChange} onBlur={handleBlur} id={'message' + messageState} required />
+                {messageAlert}
+                <input id='submitButton' type="submit" value="Send" />
+            </form>
+            {submissionAlert}
+        </div>
     );
 }
 
