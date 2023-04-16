@@ -5,15 +5,18 @@
     margin-right: 0;
 }
 
+#welcomeNote {
+    text-align: center;
+    color: #D00000;
+}
+
 .About {
     display: flex;
     padding: 10px;
-    /* background-image: url('../public/assets/MovingBackground.gif'); */
 }
 
 .AboutMe {
     background-color: transparent;
-    /* color: #E4DFDA; */
 }
 
 .Headshot {
@@ -91,9 +94,13 @@ nav ul {
 .projectListItem {
     padding: 5px;
     margin: 10px;
-    border:#136F63 3px solid;
     border-radius: 10px;
     background-color: #FFBA08;
+}
+
+.projectListItem:hover {
+    background-color: #ffb9087a;
+    border:#136F63 3px solid;
 }
 
 .projectListItem img {
@@ -181,20 +188,23 @@ Form textarea {
     padding: 10px;
 }
 
-.Resume h2{
+.Resume h3{
     text-align: center;
+}
+
+.Resume #skills {
+    list-style-type: none;
 }
 
 Footer {
     background-color: #136F63;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     color: #FFBA08;
-}
-
-Footer p {
-    background-color: transparent;
+    position: fixed;
+    bottom: 0;
 }
 
 .FooterElements {

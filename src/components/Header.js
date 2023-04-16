@@ -7,7 +7,7 @@ function Header(props) {
 
     return (
         <div className='Header'>
-            <h1>Welcome to Michael Shaari's Professional Portfolio</h1>
+            <h1>Michael Shaari</h1>
             < Navigation currentPage={currentPage} handlePageChange={handlePageChange}/>
         </div>
     );

@@ -4,8 +4,6 @@ import Project from './Project';
 function Footer() {
     return (
         <footer>
-            <p id='FooterCredits'>Created by Michael M. Shaari using React</p>
-
             <div className='FooterElements'>
             <ul>
                 <a href="#https://github.com/mshaari">GitHub</a>

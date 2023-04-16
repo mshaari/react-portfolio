@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Project from './Project';
 
 function Header() {
@@ -45,7 +45,7 @@ function Header() {
 
     return (
         <div className='Portfolio'>
-            <h2>My Professional Web Development Portfolio</h2>
+            <h2>Web Development Portfolio</h2>
             <p>See the below projects that demonstrate my web development capabilities and work. Click on the image to visit the application.</p>
             <Project projects={projects} />
         </div>
