@@ -46,7 +46,7 @@ function Header() {
     return (
         <div className='Portfolio'>
             <h2>Web Development Portfolio</h2>
-            <p>See the below projects that demonstrate my web development capabilities and work. Click on the image to visit the application.</p>
+            <p>See the below projects that demonstrate my web development capabilities and work.</p>
             <Project projects={projects} />
         </div>
     );
