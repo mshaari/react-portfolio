@@ -32,7 +32,7 @@ function App() {
 
 
   return (
-    <div className="bucket-app">
+    <div className="rootApp">
       <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
       {/* We are passing the currentPage from state and the function to update it */}
       {/* Here we are calling the renderPage method which will return a component depending on what page they are on */}

@@ -33,13 +33,13 @@ function Contact() {
             // If the input field is empty, alert the user
             if (e.target.name === "user_name") {
                 setNameState(false);
-                setNameAlert(<p>Please enter a valid name.</p>)
+                setNameAlert(<p className='formAlert'>Please enter a valid name.</p>)
             } else if (e.target.name === "user_email") {
                 setEmailState(false);
-                setEmailAlert(<p>Please enter a valid email.</p>)
+                setEmailAlert(<p className='formAlert'>Please enter a valid email.</p>)
             } else if (e.target.name === "message") {
                 setMessageState(false);
-                setMessageAlert(<p>Please enter a valid message.</p>)
+                setMessageAlert(<p className='formAlert'>Please enter a valid message.</p>)
             }
         } else {
             if (e.target.name === "user_name") {
@@ -54,7 +54,7 @@ function Contact() {
                     return;
                 } else {
                     setEmailState(false);
-                    setEmailAlert(<p>Please enter a valid email.</p>);
+                    setEmailAlert(<p className='formAlert'>Please enter a valid email.</p>);
                 }
             } else if (e.target.name === "message") {
                 setMessageState(true);
