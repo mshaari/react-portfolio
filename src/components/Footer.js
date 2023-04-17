@@ -9,7 +9,7 @@ function Footer() {
                 </li>
 
                 <li>
-                    <a href="mailto:michael.shaari@gmail.com">Email</a>
+                    <a href="https://stackoverflow.com/users/21660005/michael-s">Stack Overflow</a>
                 </li>
 
                 <li>
