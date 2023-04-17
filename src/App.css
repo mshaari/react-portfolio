@@ -127,7 +127,6 @@ nav ul {
 }
 
 .flashingUrl a {
-    background-color: #D00000;
     padding: 5px;
     border-radius: 10px;
     animation-name: rotatingColors;
@@ -161,6 +160,21 @@ nav ul {
 .projectListItem img {
     width: 400px;
     border-radius: 10px;
+}
+
+@keyframes rotatingBorder {
+    0%   {border-color: #D00000;}
+    25%  {border-color: #FFBA08;}
+    50%  {border-color: #3F88C5;}
+    100% {border-color: #136F63;}
+}
+
+
+.projectListItem img:hover {
+    border: 3px solid;
+    animation-name: rotatingBorder;
+    animation-duration: 4s;  
+    animation-iteration-count: infinite;
 }
 
 .projectList a {
