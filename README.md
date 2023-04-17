@@ -15,7 +15,7 @@ React Portfolio is my Professional Portfolio that demonstrates my web developmen
 
 The About page features a bio and headshot. The Portfolio is my web development exhibit, displaying six of my web applications with a title, image, link to the application, and link to the GitHub repository. The Contact page contains a contact form where users enter a name, email, and message and, upon submission, I receive an email with their message -- it will alert the user if they do not enter a valid input (including email validation) for any of the forms upon clicking off of the input field. Lastly, the Resume page displays my professional skills and the option to download my resume as a PDF. Every page has a Header which includes my name and a Navigation bar that highlights the current page. Each page also contains a Footer with links to my GitHub, LinkedIn, and Stack Overflow. 
 
-![](Assets/Screenshot.png)
+![](public/assets/Screenshot.png)
 
 ## Installation
 To install my React Portfolio, download [the repository](https://github.com/mshaari/react-portfolio) from GitHub by running
