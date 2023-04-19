@@ -27,7 +27,7 @@ function App() {
     }
   };
 
-  // Export the handlePageChange functionality that will change the currentPage to whatever the input is (CHECK THIS IS TRUE???)
+  // Export the handlePageChange functionality that will change the currentPage to whatever the input is
   const handlePageChange = (page) => setCurrentPage(page);
 
 
