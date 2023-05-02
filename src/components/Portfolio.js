@@ -6,6 +6,12 @@ function Header() {
     // Declare an array of projects that will get passed into Project element to create the multiple projects
     const projects = [
         {
+            name: "Open Source",
+            url: "https://open-source.herokuapp.com/",
+            github: "https://github.com/mshaari/open-source",
+            image: "OpenSource.png"
+        },
+        {
             name: "Recipe Health Guru",
             url: "https://recipe-health-guru.herokuapp.com/",
             github: "https://github.com/jonytoast/health_bar",
